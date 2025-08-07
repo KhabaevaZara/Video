@@ -20,11 +20,36 @@ body{
     align-items: flex-end;
     display: flex;
 }
-.hangman-box {
+.hangman-box img {
+    min-width: 270px;
+}
+.hangman-box h6{
+font-size: 1.45rem;
+text-align: center;
+text-transform: uppercase;
+margin-top: 20px;
 }
 .game-box {
 }
-.word-display {
+.word-display{
+    gap: 10px;
+   margin-bottom: 40px;
+   align-items: center;
+   justify-content: center;
+    display: flex;
+    list-style: none;
+}
+.word-display  .letter{
+    width: 28px;
+ font-size: 2rem;
+ font-weight: 600;
+ text-transform: uppercase;
+ text-align: center;
+    border-bottom: 3px solid #000;
+}
+
+.word-display .letter.guessed{
+background-color: transparent;
 }
 .letter {
 }
