@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #5E63BA;
+}
+.container {
+    width: 850px;
+    background-color: #fff;
+    padding: 60px 40px;
+    border-radius: 10px;
+    gap: 70px;
+    align-items: flex-end;
+    display: flex;
+}
+.hangman-box {
+}
+.game-box {
+}
+.word-display {
+}
+.letter {
+}
+.hint-text {
+}
+.guesses-text {
+}
+.keyboard {
+}
