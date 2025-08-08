@@ -1,16 +1,22 @@
+:root{
+    --color: #5E63BA;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: serif;
 }
+
 body{
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #5E63BA;
+    background-color: var(--color);
 }
+
 .container {
     width: 850px;
     background-color: #fff;
@@ -29,8 +35,7 @@ text-align: center;
 text-transform: uppercase;
 margin-top: 20px;
 }
-.game-box {
-}
+
 .word-display{
     gap: 10px;
    margin-bottom: 40px;
@@ -49,13 +54,54 @@ margin-top: 20px;
 }
 
 .word-display .letter.guessed{
-background-color: transparent;
+border-color: transparent;
+margin: -40px 0 35px;
 }
+
+.game-box  h6{
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.game-box  h6 b{
+    
+    font-weight: 600;
+}
+
+.game-box .guesses-text b {
+color: #ff0000;
+}
+
+.game-box .keyboard  {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
+    .keyboard button{
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        background-color:var(--color) ;
+        border-radius: 4px;
+        cursor: pointer;
+        outline: none;
+        padding: 7px;
+        border: none;
+
+        width: calc(100% / 9 - 5px);
+    }
+    .keyboard button:hover{
+        background-color: #8286c9;
+        
+    }
 .letter {
 }
 .hint-text {
 }
 .guesses-text {
-}
-.keyboard {
 }
