@@ -1,7 +1,7 @@
 const keyboarddDiv = document.querySelector(".keyboard");
 
 const getRandomWord = () =>{
-    
+    const {word , hint }= wordList
 }
 
 //Creating keyboard buttons 
