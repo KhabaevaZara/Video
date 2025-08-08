@@ -77,6 +77,7 @@ color: #ff0000;
 .game-box .keyboard  {
     display: flex;
     gap: 5px;
+    margin-top: 40px;
     flex-wrap: wrap;
     justify-content: center;
     }
@@ -97,11 +98,18 @@ color: #ff0000;
     }
     .keyboard button:hover{
         background-color: #8286c9;
-        
+
     }
-.letter {
+/* .letter {
 }
 .hint-text {
 }
 .guesses-text {
+} */
+
+.game-modal {
+}
+.content {
+}
+.play-again {
 }
