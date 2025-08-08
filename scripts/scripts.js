@@ -1,9 +1,11 @@
+const wordDisplay = document.querySelector(".word-display");
 const keyboardDiv = document.querySelector(".keyboard");
-
 const getRandomWord = () =>{
     // Selecting a random word and hint from the wordList
     const {word , hint }= wordList[Math.floor(Math.random() * wordList.length)];
-    console.log(word, hint)
+    console.log(word)
+    document.querySelector("hint-text b").innerText = hint;
+    wordDisplay.innerHTML = word.split("").map( () => `<li class="letter "></li>`).join("");
 }
 
 //Creating keyboard buttons 
