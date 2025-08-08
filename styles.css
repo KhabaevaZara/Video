@@ -154,7 +154,18 @@ color: #ff0000;
     padding: 12px 23px;
 
 }
-.content {
-}
-.play-again {
+
+@media (max-width:782px ){
+    .container {
+     flex-direction: column;
+     padding: 30px 15px;
+     align-items: center;
+      
+    }
+    .hangman-box img {
+        min-width: 200px;
+    }
+    .hangman-box h6{
+    display: none;
+    }
 }
