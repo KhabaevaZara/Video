@@ -7,6 +7,9 @@ const getRandomWord = () =>{
     document.querySelector(".hint-text b").innerText = hint;
     wordDisplay.innerHTML = word.split("").map( () => `<li class="letter "></li>`).join("");
 }
+const initGame = (button, clickedLetter) =>{
+
+}
 
 //Creating keyboard buttons  and adding event listeners
 for (let i= 97; i<= 122; i++ ){
