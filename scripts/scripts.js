@@ -1,4 +1,8 @@
+const keyboarddDiv = document.querySelector(".keyboard");
+
 for (let i= 97; i<= 122; i++ ){
-    console.log(String.fromCharCode(i));
+    const button = document.createElement("button");
+    button.innerText=String.fromCharCode(i); 
+    
 
 }
