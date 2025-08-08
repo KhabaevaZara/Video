@@ -8,7 +8,7 @@ const getRandomWord = () =>{
     wordDisplay.innerHTML = word.split("").map( () => `<li class="letter "></li>`).join("");
 }
 
-//Creating keyboard buttons 
+//Creating keyboard buttons  and adding event listeners
 for (let i= 97; i<= 122; i++ ){
     const button = document.createElement("button");
     button.innerText=String.fromCharCode(i); 
