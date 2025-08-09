@@ -33,9 +33,9 @@ const hangmanImage = document.querySelector(".hangman-box img");
 
         const gameOver = (isVictory) => {
             setTimeout(() => {
-                const modalText = isVictory ? `You found the word:` : `The correct word was:`;
+                const modalText = isVictory ? `Вы нашли правильное слово:` : `Привальное слово :`;
                 gameModal.querySelector("img").src = `images/${isVictory ? 'victory' : 'lost'}.gif`;
-                gameModal.querySelector("h6").innerText = isVictory ? 'Congrats!' : 'Game Over!';
+                gameModal.querySelector("h6").innerText = isVictory ? 'Поздравляю!' : 'Игра окончена!';
                 gameModal.querySelector("p").innerHTML = `${modalText} <b>${currentWord}</b>`;
                 gameModal.classList.add("show");
             }, 300);
