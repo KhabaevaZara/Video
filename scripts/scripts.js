@@ -14,7 +14,13 @@ const getRandomWord = () =>{
 const initGame = (button, clickedLetter) =>{
     //Cheking if clickedLetter is exist on the currentWord
     if(currentWord.includes(clickedLetter)){
-        console.log(clickedLetter, "is  exist");
+        //Showing all correct letters on the word display
+        [...currentWord] .forEach((letter,index) => {
+            if(letter === clickedLetter){
+                wordDisplay.querySelectorAll("li")[index].innerText= letter;
+                wordDisplay.querySelectorAll("li")[index].classListt.add("guessed")
+            }
+        })
     }else{
         console.log(clickedLetter, "is not exist");
     }
