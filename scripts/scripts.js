@@ -12,7 +12,7 @@ const getRandomWord = () =>{
     wordDisplay.innerHTML = word.split("").map( () => `<li class="letter "></li>`).join("");
 }
 const initGame = (button, clickedLetter) =>{
-    //Cheking if licked
+    //Cheking if clickedLetter is exist on the currentWord
     if(currentWord.includes(clickedLetter)){
         console.log(clickedLetter, "is  exist");
     }else{
