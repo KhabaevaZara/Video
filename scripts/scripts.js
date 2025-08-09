@@ -1,6 +1,8 @@
 const wordDisplay = document.querySelector(".word-display");
+const guessesText = document.querySelector(".keyboard");
 const keyboardDiv = document.querySelector(".keyboard");
-let currentWord;
+let currentWord, wrongGuessCount =0;
+const maxGuesses = 6;
 
 const getRandomWord = () =>{
     // Selecting a random word and hint from the wordList
@@ -18,11 +20,11 @@ const initGame = (button, clickedLetter) =>{
         [...currentWord] .forEach((letter,index) => {
             if(letter === clickedLetter){
                 wordDisplay.querySelectorAll("li")[index].innerText= letter;
-                wordDisplay.querySelectorAll("li")[index].classListt.add("guessed")
+                wordDisplay.querySelectorAll("li")[index].classList.add("guessed")
             }
         })
     }else{
-        console.log(clickedLetter, "is not exist");
+        wrongGuessCount++;
     }
 }
 
