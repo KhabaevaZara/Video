@@ -8,13 +8,6 @@ const playAgainBtn = document.querySelector(".play-again");
 let currentWord, correctLetters, wrongGuessCount;
 const maxGuesses = 6;
 
-const wordList = [
-    { word: "bicycle", hint: "A human-powered vehicle with two wheels" },
-    { word: "rainbow", hint: "Weather phenomenon with colors" },
-    { word: "keyboard", hint: "Input device for computers" },
-    { word: "guitar", hint: "Musical instrument with strings" },
-    { word: "mountain", hint: "Large natural elevation of the earth's surface" }
-];
 
 const resetGame = () => {
     correctLetters = [];

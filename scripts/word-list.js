@@ -1,59 +1,202 @@
-
-const wordList = [
-    { word: "bicycle", hint: "Транспортное средство с двумя колесами, приводимое в движение человеком" },  
-    { word: "rainbow", hint: "Природное явление в виде разноцветной дуги" },  
-    { word: "keyboard", hint: "Устройство ввода для компьютера" },  
-    { word: "guitar", hint: "Музыкальный инструмент со струнами" },  
-    { word: "mountain", hint: "Большое природное возвышение земной поверхности" },  
-    { word: "apple", hint: "Фрукт, который ассоциируется с Нью-Йорком" },  
-    { word: "ocean", hint: "Огромный водоем с соленой водой" },  
-    { word: "mirror", hint: "Поверхность, отражающая свет" },  
-    { word: "candle", hint: "Источник света из воска с фитилем" },  
-    { word: "diamond", hint: "Драгоценный камень, самый твердый минерал" },  
-    { word: "whisper", hint: "Тихая речь, почти беззвучная" },  
-    { word: "volcano", hint: "Гора, извергающая лаву и пепел" },  
-    { word: "puzzle", hint: "Игра, требующая решения задачи" },  
-    { word: "sunset", hint: "Момент исчезновения солнца за горизонтом" },  
-    { word: "telescope", hint: "Прибор для наблюдения за звездами" },  
-    { word: "shadow", hint: "Темное пятно, образуемое при блокировке света" },  
-    { word: "butterfly", hint: "Насекомое с яркими крыльями" },  
-    { word: "lightning", hint: "Электрический разряд во время грозы" },  
-    { word: "whistle", hint: "Звук, издаваемый при пропускании воздуха через узкое отверстие" },  
-    { word: "compass", hint: "Прибор для определения сторон света" },  
-    { word: "lighthouse", hint: "Башня с маяком для навигации кораблей" },  
-    { word: "parrot", hint: "Птица, способная имитировать человеческую речь" },  
-    { word: "snowflake", hint: "Уникальная кристаллическая форма замерзшей воды" },  
-    { word: "treasure", hint: "Спрятанные ценности, которые ищут кладоискатели" },  
-    { word: "waterfall", hint: "Падение воды с высоты" },  
-    { word: "xylophone", hint: "Музыкальный инструмент с деревянными брусками" },  
-    { word: "zeppelin", hint: "Большой управляемый воздушный шар" },  
-    { word: "quicksand", hint: "Песок, который затягивает при попадании в него" },  
-    { word: "jigsaw", hint: "Пазл, состоящий из множества деталей" },  
-    { word: "kangaroo", hint: "Австралийское животное с сумкой" },  
-    { word: "laptop", hint: "Переносной компьютер" },  
-    { word: "mushroom", hint: "Гриб, растущий после дождя" },  
-    { word: "notebook", hint: "Тетрадь для записей" },  
-    { word: "octopus", hint: "Морское животное с восемью щупальцами" },  
-    { word: "penguin", hint: "Птица, которая не летает, но отлично плавает" },  
-    { word: "quartz", hint: "Минерал, используемый в электронике" },  
-    { word: "raincoat", hint: "Одежда для защиты от дождя" },  
-    { word: "scissors", hint: "Инструмент для резки бумаги" },  
-    { word: "tornado", hint: "Сильный вихрь с разрушительной силой" },  
-    { word: "umbrella", hint: "Устройство для защиты от дождя или солнца" },  
-    { word: "violin", hint: "Струнный музыкальный инструмент" },  
-    { word: "watermelon", hint: "Большая сочная ягода с зеленой кожурой" },  
-    { word: "yacht", hint: "Роскошное судно для отдыха" },  
-    { word: "zebra", hint: "Животное с черно-белыми полосами" },  
-    { word: "anchor", hint: "Металлический крюк для удержания судна" },  
-    { word: "ballet", hint: "Вид танцевального искусства" },  
-    { word: "cactus", hint: "Растение, растущее в пустыне" },  
-    { word: "dolphin", hint: "Умное морское млекопитающее" },  
-    { word: "eclipse", hint: "Затмение Солнца или Луны" },  
-    { word: "fireworks", hint: "Яркие взрывы в ночном небе" },  
-    { word: "giraffe", hint: "Животное с длинной шеей" },  
-    { word: "hamburger", hint: "Бутерброд с котлетой и овощами" },  
-    { word: "island", hint: "Участок суши, окруженный водой" },  
-    { word: "jacket", hint: "Верхняя одежда для прохладной погоды" },  
-    { word: "koala", hint: "Австралийское сумчатое животное, питающееся эвкалиптом" },  
-    { word: "lemon", hint: "Желтый кислый цитрус" }  
-];
+const wordList=[
+    {
+        word: "bicycle",
+        hint: "A human-powered vehicle with two wheels"
+    },
+    {
+        word: "airplane",
+        hint: "A vehicle that flies in the sky with wings"
+    },
+    {
+        word: "guitar",
+        hint: "A musical instrument with six strings"
+    },
+    {
+        word: "library",
+        hint: "A place where you can borrow books"
+    },
+    {
+        word: "pizza",
+        hint: "A popular Italian dish with toppings on dough"
+    },
+    {
+        word: "umbrella",
+        hint: "An object used to protect from rain or sun"
+    },
+    {
+        word: "dolphin",
+        hint: "A highly intelligent marine mammal"
+    },
+    {
+        word: "mountain",
+        hint: "A large natural elevation of the earth's surface"
+    },
+    {
+        word: "keyboard",
+        hint: "Input device for computers with keys"
+    },
+    {
+        word: "sunflower",
+        hint: "A tall yellow flower that follows the sun"
+    },
+    {
+        word: "telephone",
+        hint: "Device used to communicate over distances"
+    },
+    {
+        word: "notebook",
+        hint: "A book of blank pages for writing notes"
+    },
+    {
+        word: "volcano",
+        hint: "A mountain that can erupt with lava"
+    },
+    {
+        word: "camera",
+        hint: "Device used to take photographs"
+    },
+    {
+        word: "parrot",
+        hint: "A colorful bird that can mimic speech"
+    },
+    {
+        word: "hospital",
+        hint: "Place where sick or injured people receive treatment"
+    },
+    {
+        word: "watermelon",
+        hint: "A large juicy fruit with green rind and red flesh"
+    },
+    {
+        word: "backpack",
+        hint: "A bag carried on the back for storing items"
+    },
+    {
+        word: "fireplace",
+        hint: "A structure for containing a fire indoors"
+    },
+    {
+        word: "telescope",
+        hint: "Optical instrument for viewing distant objects"
+    },
+    {
+        word: "sandwich",
+        hint: "Food item with fillings between two slices of bread"
+    },
+    {
+        word: "rainbow",
+        hint: "Meteorological phenomenon with spectrum of light"
+    },
+    {
+        word: "snowflake",
+        hint: "A unique ice crystal that falls as snow"
+    },
+    {
+        word: "whisper",
+        hint: "To speak very softly without vibrating vocal cords"
+    },
+    {
+        word: "diamond",
+        hint: "A precious stone made of carbon crystals"
+    },
+    {
+        word: "calendar",
+        hint: "System for organizing days and months"
+    },
+    {
+        word: "lightning",
+        hint: "A sudden electrostatic discharge during a storm"
+    },
+    {
+        word: "balloon",
+        hint: "Inflatable flexible bag filled with gas"
+    },
+    {
+        word: "octopus",
+        hint: "Sea creature with eight arms and soft body"
+    },
+    {
+        word: "chocolate",
+        hint: "Sweet food made from roasted cacao seeds"
+    },
+    {
+        word: "compass",
+        hint: "Navigation instrument that shows direction"
+    },
+    {
+        word: "lighthouse",
+        hint: "Tower with a bright light to guide ships"
+    },
+    {
+        word: "tornado",
+        hint: "A violently rotating column of air"
+    },
+    {
+        word: "binoculars",
+        hint: "Optical device with two telescopes for both eyes"
+    },
+    {
+        word: "waterfall",
+        hint: "Where water flows over a vertical drop"
+    },
+    {
+        word: "skyscraper",
+        hint: "Very tall multi-story building"
+    },
+    {
+        word: "hamburger",
+        hint: "Sandwich consisting of a patty in a bun"
+    },
+    {
+        word: "penguin",
+        hint: "Flightless bird that lives in cold climates"
+    },
+    {
+        word: "submarine",
+        hint: "Watercraft that operates underwater"
+    },
+    {
+        word: "trampoline",
+        hint: "Device consisting of a strong fabric stretched over a frame for jumping"
+    },
+    {
+        word: "helicopter",
+        hint: "Aircraft with horizontally rotating blades"
+    },
+    {
+        word: "saxophone",
+        hint: "A woodwind instrument made of brass"
+    },
+    {
+        word: "spaghetti",
+        hint: "Long thin cylindrical pasta of Italian origin"
+    },
+    {
+        word: "scarecrow",
+        hint: "Decoy in human shape to scare birds from crops"
+    },
+    {
+        word: "popcorn",
+        hint: "Corn kernels that expand and puff up when heated"
+    },
+    {
+        word: "jigsaw",
+        hint: "Puzzle consisting of many interlocking pieces"
+    },
+    {
+        word: "cucumber",
+        hint: "Long green vegetable often used in salads"
+    },
+    {
+        word: "fireworks",
+        hint: "Explosive devices for entertainment displays"
+    },
+    {
+        word: "hammock",
+        hint: "Hanging bed made of fabric or netting"
+    },
+    {
+        word: "kangaroo",
+        hint: "Australian marsupial with powerful hind legs"
+    }
+]
