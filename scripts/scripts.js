@@ -31,6 +31,8 @@ const initGame = (button, clickedLetter) =>{
     }
     button.disabled = true;
     guessesText.innerText = `${wrongGuessCount}/${maxGuesses}`;
+
+    if(wrongGuessCount === maxGuesses) return gameOver(false);
 }
 
 //Creating keyboard buttons  and adding event listeners
