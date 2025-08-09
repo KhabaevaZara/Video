@@ -2,7 +2,7 @@ const hangmanImage = document.querySelector(".hangman-box img");
 const wordDisplay = document.querySelector(".word-display");
 const guessesText = document.querySelector(".guesses-text b");
 const keyboardDiv = document.querySelector(".keyboard");
-const gameModal = document.querySelector(".game-modal")
+const gameModal = document.querySelector(".game-modal");
 let currentWord, correctLetters =[ ],  wrongGuessCount =0;
 const maxGuesses = 6;
 
@@ -17,7 +17,7 @@ const getRandomWord = () =>{
 }
 const gameOver =(isVictory) => {
     setTimeout(() => {
-
+        gameModal.classList.add("show");
     }, 300 );
 };
 const initGame = (button, clickedLetter) =>{
