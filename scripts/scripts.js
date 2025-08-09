@@ -7,12 +7,13 @@ const playAgainBtn = document.querySelector(".play-again")
 let currentWord, correctLetters ,  wrongGuessCount;
 const maxGuesses = 6;
 const resetGame =() =>{
+    //Resseting all game variables  and UI elements
     correctLetters =[ ];
     wrongGuessCount =0;
     hangmanImage.src=`images/hangman-${wrongGuessCount}.svg`;
     guessesText.innerText = `${wrongGuessCount}/${maxGuesses}`;
     keyboardDiv.querySelectorAll("button").forEach(btn => btn.disabled = false );
-    wordDisplay.innerHTML = word.split("").map( () => `<li class="letter "></li>`).join("");
+    wordDisplay.innerHTML = currentWord.split("").map( () => `<li class="letter "></li>`).join("");
     gameModal.classList.remove("show");
 }
 
