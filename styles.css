@@ -136,8 +136,8 @@ body {
 
 .game-modal .content {
     background-color: var(--white);
-    min-width: 420px;
-    width: 100%;
+    width: 420px;
+   
     text-align: center;
     border-radius: 10px;
     padding: 30px;
