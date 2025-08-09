@@ -3,43 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="/scripts/word-list.js" defer></script>
-    <script src="/scripts/scripts.js" defer></script>
- 
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="/styles.css">
+<script src="/scripts/word-list.js" defer ></script>
+<script src="/scripts/scripts.js" defer ></script>
 </head>
 <body>
     <div class="game-modal">
         <div class="content">
-            <img src="/images/lost.gif" alt="gif">
+            <img src="images/lost.gif" alt="gif">
             <h6>Game Over</h6>
-            <p>The correct word was : <b> rainbow</b></p>
+            <p>The correct word was: <b>rainbow</b></p>
             <button class="play-again">Play again</button>
         </div>
     </div>
 
     <div class="container">
         <div class="hangman-box">
-            <img src="/images/hangman-0.svg" alt="">
-            <h6>Hangman Game </h6>
+            <img src="images/hangman-0.svg" alt="hangman">
+            <h6>Hangman Game</h6>
         </div>
         <div class="game-box">
-            <ul class="word-display">
-               
-            </ul>
+            <ul class="word-display"></ul>
             <h6 class="hint-text">
                 Hint:
-                <b class=""> Lorem ipsum dolor sit amet consectetur adipisicing elit.</b>
+                <b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b>
             </h6>
             <h6 class="guesses-text">
-                Incrorrect guesses :
-                <b class=""> 0/6</b>
+                Incorrect guesses:
+                <b>0/6</b>
             </h6>
-            <div class="keyboard">
-              
-            </div>
+            <div class="keyboard"></div>
         </div>
     </div>
+    
+  
 </body>
 </html>

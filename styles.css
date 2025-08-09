@@ -1,16 +1,16 @@
-:root{
+:root {
     --color: #5E63BA;
     --white: #fff;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: serif;
+    font-family: sans-serif; /* Изменено на sans-serif */
 }
 
-body{
+body {
     padding: 0 10px;
     display: flex;
     align-items: center;
@@ -28,91 +28,89 @@ body{
     align-items: flex-end;
     display: flex;
 }
+
 .hangman-box img {
     min-width: 270px;
 }
-.hangman-box h6{
-font-size: 1.45rem;
-text-align: center;
-text-transform: uppercase;
-margin-top: 20px;
+
+.hangman-box h6 {
+    font-size: 1.45rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
 }
 
-.word-display{
+.word-display {
     gap: 10px;
-   margin-bottom: 40px;
-   align-items: center;
-   justify-content: center;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: center;
     display: flex;
     list-style: none;
 }
-.word-display  .letter{
+
+.word-display .letter {
     width: 28px;
- font-size: 2rem;
- font-weight: 600;
- text-transform: uppercase;
- text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
     border-bottom: 3px solid #000;
 }
 
-.word-display .letter.guessed{
-border-color: transparent;
-margin: -40px 0 35px;
+.word-display .letter.guessed {
+    border-color: transparent;
 }
 
-.game-box  h6{
+.game-box h6 {
     text-align: center;
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-.game-box  h6 b{
-    
+.game-box h6 b {
     font-weight: 600;
 }
 
 .game-box .guesses-text b {
-color: #ff0000;
+    color: #ff0000;
 }
 
-.game-box .keyboard  {
+.game-box .keyboard {
     display: flex;
     gap: 5px;
     margin-top: 40px;
     flex-wrap: wrap;
     justify-content: center;
-    }
-:where(.game-modal, .keyboard) button{
-  color: var(--white);
-        font-size: 1rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        background-color:var(--color) ;
-        border-radius: 4px;
-        cursor: pointer;
-        outline: none;
-        padding: 7px;
 }
-    .keyboard button{
-        padding: 7px;
-        width: calc(100% / 9 - 5px);
-    }
-    .keyboard button [disabled]{
-        opacity: 0.6;
-        pointer-events: none;
 
-    }
-    :where(.game-modal, .keyboard) button:hover{
-        background-color: #8286c9;
+:where(.game-modal, .keyboard) button {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: var(--color);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    padding: 7px;
+    border: none;
+}
 
-    }
-/* .letter {
+.keyboard button {
+    padding: 7px;
+    width: calc(100% / 9 - 5px);
 }
-.hint-text {
+
+.keyboard button[disabled] {
+    opacity: 0.6;
+    pointer-events: none;
 }
-.guesses-text {
-} */
+
+:where(.game-modal, .keyboard) button:hover {
+    background-color: #8286c9;
+}
 
 .game-modal {
     position: fixed;
@@ -120,65 +118,65 @@ color: #ff0000;
     top: 0;
     width: 100%;
     height: 100%;
-    opacity:0;
-    padding:0  10px;
+    opacity: 0;
+    padding: 0 10px;
     pointer-events: none;
     z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0,0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     transition: opacity 0.4s ease;
 }
 
-.game-modal.show{
+.game-modal.show {
     opacity: 1;
     pointer-events: auto;
-    
 }
-.game-modal .content{
+
+.game-modal .content {
     background-color: var(--white);
     min-width: 420px;
     width: 100%;
     text-align: center;
     border-radius: 10px;
     padding: 30px;
-
 }
-.game-modal img{
+
+.game-modal img {
     max-width: 130px;
     margin-bottom: 20px;
 }
-.game-modal h6{
+
+.game-modal h6 {
     font-size: 1.53rem;
 }
 
-.game-modal p{
+.game-modal p {
     font-size: 1.15rem;
     margin: 15px 0 30px;
     font-weight: 500;
 }
 
-.game-modal p b{
-   color: var(--color);
-   font-weight: 600;
+.game-modal p b {
+    color: var(--color);
+    font-weight: 600;
 }
-.game-modal button{
+
+.game-modal button {
     padding: 12px 23px;
-
 }
 
-@media (max-width:782px ){
+@media (max-width: 782px) {
     .container {
-     flex-direction: column;
-     padding: 30px 15px;
-     align-items: center;
-      
+        flex-direction: column;
+        padding: 30px 15px;
+        align-items: center;
     }
     .hangman-box img {
         min-width: 200px;
     }
-    .hangman-box h6{
-    display: none;
+    .hangman-box h6 {
+        display: none;
     }
 }
