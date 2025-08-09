@@ -8,8 +8,6 @@ const hangmanImage = document.querySelector(".hangman-box img");
         let currentWord, correctLetters, wrongGuessCount;
         const maxGuesses = 6;
         
-        
-
         const resetGame = () => {
             correctLetters = [];
             wrongGuessCount = 0;
