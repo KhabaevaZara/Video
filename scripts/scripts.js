@@ -17,6 +17,10 @@ const getRandomWord = () =>{
 }
 const gameOver =(isVictory) => {
     setTimeout(() => {
+        const modalText = isVictory ? `You found the word:`: `The correct word was : `;
+        gameModal.querySelector("img").src = `images/${ isVictory ? 'victory' : 'lost'}.gif`;
+        gameModal.querySelector("h6").innerText = `${ isVictory ? 'Congrats!' : 'Game Over!'}`;
+        gameModal.querySelector("p").innerHTML = `${modalText} <b></b>`;
         gameModal.classList.add("show");
     }, 300 );
 };
